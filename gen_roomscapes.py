@@ -94,7 +94,7 @@ def generate_soundscape(idx, available_rooms):
     ssc.generate(audiofile, labelfile)
     return filename
 
-def main(num_clips=900):
+def main(num_clips=2000):
     """Generate multiple soundscapes"""
     # Create output directories
     os.makedirs(os.path.join(OUTPUT_DIR, "audio"), exist_ok=True)
