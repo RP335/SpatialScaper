@@ -17,13 +17,13 @@ TIME_SLOTS = 4  # Split duration into slots for better event distribution
 # Event distribution (percentages) - Modify these as needed
 EVENT_DISTRIBUTION = {
     # "clapping": 15,      #class 2
-    # "telephone": 10,     #class 3
+    "telephone": 20,     #class 3
     # "laughter": 10,      #class 4
     # "footsteps": 15,     #class 6
     "doorCupboard": 10,  #class 7
-    # "waterTap": 15,      #class 10
-    "bell": 10,          #class 11
-    # "knock": 15          #class 12
+    "waterTap": 10,      #class 10
+    "bell": 20,          #class 11
+    "knock": 40          #class 12
 }
 
 def get_foa_rooms():
@@ -46,7 +46,9 @@ def generate_soundscape(idx, available_rooms):
         room=room,
         max_event_overlap=2,
         ref_db=REF_DB,
-        DCASE_format=True
+        DCASE_format=True,
+        speed_limit=0.7,
+
     )
 
     # Add background ambient noise
@@ -75,7 +77,7 @@ def generate_soundscape(idx, available_rooms):
                 source_file=("choose", []),
                 source_time=("const", 0),
                 event_time=("uniform", start_time, end_time),
-                event_position=("const", ("uniform", None, None)),  # Static position
+                # event_position=("const", ("uniform", None, None)),  # Static position
                 snr=("uniform", SNR_RANGE[0], SNR_RANGE[1])
             )
             events_added += 1
