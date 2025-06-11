@@ -8,7 +8,7 @@ from pathlib import Path
 DURATION = 60  # 1 minute duration
 SOUND_DIR = "datasets/sound_event_datasets/FSD50K_FMA"
 RIR_DIR = "datasets/rir_datasets/"
-OUTPUT_DIR = "output/soundscapes"
+OUTPUT_DIR = "output/soundscapes_2"
 SR = 24000
 REF_DB = -50
 SNR_RANGE = (5, 7)  # 5-7 dB SNR range
