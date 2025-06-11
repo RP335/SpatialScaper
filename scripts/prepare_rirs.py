@@ -507,19 +507,19 @@ if __name__ == "__main__":
     [os.makedirs(p, exist_ok=True) for p in (source_path, sofa_path)]
 
     # METU
-    metu_path = source_path / METU_REMOTES["database_name"]
-    download_and_extract_remotes(METU_REMOTES["remotes"], metu_path, args.cleanup)
-    prepare_metu(metu_path, sofa_path)
-
-    # TAU
-    tau_path = source_path / TAU_REMOTES["database_name"]
-    download_tau(tau_path, TAU_REMOTES["remotes"], args.cleanup)
-    prepare_tau(tau_path, sofa_path)
-
-    # ARNI
-    arni_path = source_path / ARNI_REMOTES["database_name"]
-    download_and_extract_remotes(ARNI_REMOTES["remotes"], arni_path, args.cleanup)
-    prepare_arni(arni_path, sofa_path)
+    # metu_path = source_path / METU_REMOTES["database_name"]
+    # download_and_extract_remotes(METU_REMOTES["remotes"], metu_path, args.cleanup)
+    # prepare_metu(metu_path, sofa_path)
+    #
+    # # TAU
+    # tau_path = source_path / TAU_REMOTES["database_name"]
+    # download_tau(tau_path, TAU_REMOTES["remotes"], args.cleanup)
+    # prepare_tau(tau_path, sofa_path)
+    #
+    # # ARNI
+    # arni_path = source_path / ARNI_REMOTES["database_name"]
+    # download_and_extract_remotes(ARNI_REMOTES["remotes"], arni_path, args.cleanup)
+    # prepare_arni(arni_path, sofa_path)
 
     # MOTUS
     motus_path = source_path / MOTUS_REMOTES["database_name"]
